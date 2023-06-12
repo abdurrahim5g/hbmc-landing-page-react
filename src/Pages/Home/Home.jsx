@@ -1,3 +1,4 @@
+import About from "../../components/About/About";
 import OurStats from "../../components/OurStats/OurStats";
 import Hero from "./Hero/Hero";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <Hero></Hero>
       <OurStats></OurStats>
+      <About></About>
     </>
   );
 };
