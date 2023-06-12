@@ -1,0 +1,25 @@
+.brands-logo .logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 70px;
+  row-gap: 50px;
+  justify-content: center;
+}
+
+.brands-logo .logos img {
+  max-width: 100%;
+  width: auto;
+}
+
+/* Responsive styles
+========================== */
+@media all and (max-width: 767px) {
+  .brands-logo .logos {
+    gap: 30px;
+    row-gap: 50px;
+  }
+  .brands-logo .logos img {
+    max-width: 80%;
+  }
+}
