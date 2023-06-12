@@ -1,0 +1,26 @@
+li.contact-us a {
+  background: var(--primary-color);
+  padding: 8px 30px;
+  border-radius: 6px;
+  color: var(--text-white);
+  border: 2px solid var(--primary-color);
+}
+
+.menu-area a {
+  transition: 0.1s;
+  display: inline-block;
+}
+
+.menu-area a:hover,
+.menu-area button:hover {
+  color: var(--primary-color);
+}
+
+.menu-area li.contact-us a:hover {
+  background: transparent;
+}
+
+/* Responsive styles 
+================================*/
+@media all and (max-width: 1100px) {
+}
