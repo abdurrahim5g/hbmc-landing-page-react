@@ -9,7 +9,6 @@ import menuToggle from "../../../assets/images/menu.png";
 import cross from "../../../assets/images/cross.png";
 import { useContext, useState } from "react";
 import { LanguageContex } from "../../../Contex/LanguageProvider";
-import i18next from "i18next";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -52,7 +51,8 @@ const Header = () => {
       </li>
       <li>
         <div className="language-selector hidden md:block">
-          {i18next.language === "en" ? (
+          {localStorage.getItem("i18nextLng") === "en-US" ||
+          localStorage.getItem("i18nextLng") === "en" ? (
             <button
               className="language-toggle flex items-center gap-2"
               onClick={() => setShowSelector(!showSelector)}
