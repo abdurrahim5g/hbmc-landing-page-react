@@ -16,9 +16,7 @@ const Hero = () => {
               {t("heroTitle")}
             </h1>
             <p className="text-center lg:text-left font-light mt-6 mb-10">
-              Lorem ipsum dolor sit amet consectetur. Aliquet vulputate in et
-              egestas. Eu vel rutrum ut suspendisse. Proin lectus nullam odio
-              vitae.
+              {t("heroSubtitle")}
             </p>
 
             <div className="hero-buttons flex gap-5 justify-center lg:justify-start">

@@ -4,13 +4,16 @@ import logo from "../../../assets/images/hbmc-logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
 import en from "../../../assets/images/languages/en.png";
+import ar from "../../../assets/images/languages/ar.png";
 import menuToggle from "../../../assets/images/menu.png";
 import cross from "../../../assets/images/cross.png";
 import { useContext, useState } from "react";
 import { LanguageContex } from "../../../Contex/LanguageProvider";
+import i18next from "i18next";
 
 const Header = () => {
   const [show, setShow] = useState(false);
+  const [showSelector, setShowSelector] = useState(false);
   const { languages, handleChangeLanguage } = useContext(LanguageContex);
   const navigate = useNavigate();
 
@@ -49,23 +52,45 @@ const Header = () => {
       </li>
       <li>
         <div className="language-selector hidden md:block">
-          <button className="language-toggle flex items-center gap-2">
-            <img src={en} alt="" />
-            <span>Eng</span>
-            <span>
-              <FaAngleDown />
-            </span>
-          </button>
-          <div className="abdulate">
-            {languages?.map((lang) => (
-              <button
-                key={lang.code}
-                onClick={() => handleLanguageChange(lang.code)}
-              >
-                {lang.name}
-              </button>
-            ))}
-          </div>
+          {i18next.language === "en" ? (
+            <button
+              className="language-toggle flex items-center gap-2"
+              onClick={() => setShowSelector(!showSelector)}
+            >
+              <img src={en} alt="" />
+              <span>Eng</span>
+              <span>
+                <FaAngleDown />
+              </span>
+            </button>
+          ) : (
+            <button
+              className="language-toggle flex items-center gap-2"
+              onClick={() => setShowSelector(!showSelector)}
+            >
+              <img src={ar} alt="" />
+              <span>Ara</span>
+              <span>
+                <FaAngleDown />
+              </span>
+            </button>
+          )}
+          {showSelector && (
+            <div className="absolute w-30 rounded-lg p-2 grid gap-1 bg-white shadow-lg select-language">
+              {languages?.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => {
+                    handleLanguageChange(lang.code);
+                    setShowSelector(!showSelector);
+                  }}
+                  className="flex items-center gap-3"
+                >
+                  <img src={lang.code === "en" ? en : ar} /> {lang.name}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </li>
       <li className="contact-us">

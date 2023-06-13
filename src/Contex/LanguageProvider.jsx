@@ -60,6 +60,12 @@ const LanguageProvider = ({ children }) => {
     { code: "ar", name: "Arabic", country_code: "ar" },
   ];
   const handleChangeLanguage = (code) => {
+    if (code === "ar") {
+      document.dir = "rtl";
+    } else {
+      document.dir = "ltr";
+    }
+    console.log(i18next.language);
     return i18next.changeLanguage(code);
   };
   const test = "Test";

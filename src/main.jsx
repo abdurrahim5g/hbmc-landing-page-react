@@ -5,9 +5,11 @@ import "./index.css";
 import LanguageProvider from "./Contex/LanguageProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <LanguageProvider>
-      <App />
-    </LanguageProvider>
-  </React.StrictMode>
+  <React.Suspense fallback={<h2>Loading...</h2>}>
+    <React.StrictMode>
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
+    </React.StrictMode>
+  </React.Suspense>
 );

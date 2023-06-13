@@ -130,7 +130,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p className="text-center py-3">
+        <p className="text-center p-3 ">
           © Al Hayat Building Material Company (HBMC) {getyear()}
         </p>
       </div>
