@@ -1,15 +1,24 @@
 import "./Header.css";
 import HeaderTop from "./HeaderTop/HeaderTop";
 import logo from "../../../assets/images/hbmc-logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
 import en from "../../../assets/images/languages/en.png";
 import menuToggle from "../../../assets/images/menu.png";
 import cross from "../../../assets/images/cross.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { LanguageContex } from "../../../Contex/LanguageProvider";
 
 const Header = () => {
   const [show, setShow] = useState(false);
+  const { languages, handleChangeLanguage } = useContext(LanguageContex);
+  const navigate = useNavigate();
+
+  const handleLanguageChange = (code) => {
+    handleChangeLanguage(code);
+    // console.log(code);
+    navigate(`/${code}`);
+  };
 
   const menu_items = (
     <>
@@ -47,6 +56,16 @@ const Header = () => {
               <FaAngleDown />
             </span>
           </button>
+          <div className="abdulate">
+            {languages?.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => handleLanguageChange(lang.code)}
+              >
+                {lang.name}
+              </button>
+            ))}
+          </div>
         </div>
       </li>
       <li className="contact-us">
