@@ -14,27 +14,27 @@ const Header = () => {
   const menu_items = (
     <>
       <li>
-        <Link className="text-sm" to="">
+        <Link className="text-sm lg:text-base" to="">
           Home
         </Link>
       </li>
       <li>
-        <Link className="text-sm" to="">
+        <Link className="text-sm lg:text-base" to="">
           about
         </Link>
       </li>
       <li>
-        <Link className="text-sm" to="">
+        <Link className="text-sm lg:text-base" to="">
           Products
         </Link>
       </li>
       <li>
-        <Link className="text-sm" to="">
+        <Link className="text-sm lg:text-base" to="">
           Our Brands
         </Link>
       </li>
       <li>
-        <Link className="text-sm" to="">
+        <Link className="text-sm lg:text-base" to="">
           Projects
         </Link>
       </li>
@@ -50,7 +50,7 @@ const Header = () => {
         </div>
       </li>
       <li className="contact-us">
-        <Link className="text-sm" to="">
+        <Link className="text-sm lg:text-base" to="">
           Contact us
         </Link>
       </li>
@@ -74,7 +74,7 @@ const Header = () => {
             </button>
 
             {show && (
-              <nav className="mobile-nav  block md:hidden absolute w-40 right-4 bg-white">
+              <nav className="mobile-nav  block md:hidden absolute w-44 rounded-lg right-4 bg-white shadow-lg p-4">
                 <ul className="grid gap-3">{menu_items}</ul>
               </nav>
             )}

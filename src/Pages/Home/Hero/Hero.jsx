@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="site-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-content-center">
           <div className="hero-text grid place-content-center">
-            <h1 className="text-4xl  md:text-6xl hero-title text-center  lg:text-left">
+            <h1 className="text-4xl  md:text-6xl hero-title text-center font-medium lg:text-left">
               Innovative, Sustainable Building Solutions.
             </h1>
             <p className="text-center lg:text-left font-light mt-6 mb-10">

@@ -9,6 +9,7 @@ li.contact-us a {
 .menu-area a {
   transition: 0.1s;
   display: inline-block;
+  font-weight: 400;
 }
 
 .menu-area a:hover,
