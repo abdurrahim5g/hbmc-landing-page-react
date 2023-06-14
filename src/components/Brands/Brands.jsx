@@ -7,8 +7,6 @@ import brand4 from "../../assets/images/brands/b-4.png";
 import brand5 from "../../assets/images/brands/b-5.png";
 import brand6 from "../../assets/images/brands/b-6.png";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Brands = () => {
   const logos = [
