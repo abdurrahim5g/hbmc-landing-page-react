@@ -52,6 +52,7 @@ const Contact = () => {
                         options={options}
                         placeholder="Select city"
                         required
+                        inputId="city"
                       />
                     </div>
                   </div>

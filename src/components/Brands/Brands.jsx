@@ -31,11 +31,12 @@ const Brands = () => {
     arrows: false,
     infinite: true,
     autoplaySpeed: 3500,
-    speed: 3499,
+    speed: 3500,
     cssEase: "linear",
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1024,
