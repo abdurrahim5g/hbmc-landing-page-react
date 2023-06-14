@@ -8,8 +8,20 @@
 }
 
 .brands-logo .logos img {
-  max-width: 100%;
+  max-width: 150px;
   width: auto;
+}
+
+.slick-slider {
+  width: 100%;
+}
+.slick-slider img {
+  margin: 0 auto;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center;
 }
 
 /* Responsive styles
