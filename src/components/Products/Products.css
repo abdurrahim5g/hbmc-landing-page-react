@@ -36,6 +36,7 @@
   display: inline-block;
   position: relative;
   margin: 0 0 10px;
+  padding-bottom: 5px;
 }
 
 .single-product .product-body h4::before {
@@ -45,11 +46,12 @@
   height: 4px;
   background: var(--primary-color);
   bottom: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 30px;
 }
 
-.single-product .product-body h4::before {
+.single-product:hover .product-body h4::before {
   background: #fff;
 }
 
