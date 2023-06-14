@@ -42,10 +42,12 @@
 .single-form-item .css-b62m3t-container:focus {
   border-color: red !important;
 }
+
 .single-form-item .css-b62m3t-container {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
+.single-form-item .css-hlgwow,
 .single-form-item .css-art2ul-ValueContainer2 {
   padding: 6px 15px;
 }
