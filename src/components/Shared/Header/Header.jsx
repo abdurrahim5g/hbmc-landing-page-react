@@ -1,6 +1,7 @@
 import "./Header.css";
 import HeaderTop from "./HeaderTop/HeaderTop";
 import logo from "../../../assets/images/hbmc-logo.svg";
+import mobileLogo from "../../../assets/images/mobile-logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
 import en from "../../../assets/images/languages/en.png";
@@ -108,7 +109,16 @@ const Header = () => {
         <div className="flex justify-between items-center py-3 gap-4">
           <div className="logo-area">
             <Link to="/">
-              <img src={logo} alt="" className="w-40 lg:w-auto" />
+              <img
+                src={logo}
+                alt=""
+                className="w-40 lg:w-auto hidden lg:block"
+              />
+              <img
+                src={mobileLogo}
+                alt=""
+                className="w-16 block lg:hidden lg:w-auto"
+              />
             </Link>
           </div>
 
