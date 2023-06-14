@@ -12,6 +12,16 @@ const Contact = () => {
     { value: "City 06", label: "City 06" },
   ];
 
+  const purposeOpt = [
+    { value: "Connection", label: "Connection " },
+    { value: "Normal talk", label: "Normal talk" },
+    { value: "Business Idea", label: "Business Idea" },
+    { value: "Investment", label: "Investment" },
+    { value: "Grow Company", label: "Grow Company" },
+    { value: "Project", label: "Project" },
+    { value: "Others", label: "Others" },
+  ];
+
   return (
     <section className="contact-section py-12 lg:py-20">
       <div className="site-container">
@@ -70,13 +80,13 @@ const Contact = () => {
                     />
                   </div>
 
-                  <div className="single-form-item">
+                  <div className="single-form-item purpose">
                     <label htmlFor="purpose">purpose</label>
-                    <input
-                      type="text"
-                      name="purpose"
-                      id="purpose"
+                    <Select
+                      options={purposeOpt}
                       placeholder="Your purpose"
+                      required
+                      inputId="purpose"
                     />
                   </div>
 
