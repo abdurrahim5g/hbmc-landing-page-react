@@ -22,6 +22,7 @@
 
 .single-project .project-info .play button img {
   width: 35px;
+  margin: 0;
 }
 
 .single-project .project-info .play button span {
