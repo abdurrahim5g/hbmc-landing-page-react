@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Contact.css";
+import Select from "react-select";
 
 const Contact = () => {
+  const options = [
+    { value: "City 01", label: "City 01" },
+    { value: "City 02", label: "City 02" },
+    { value: "City 03", label: "City 03" },
+    { value: "City 04", label: "City 04" },
+    { value: "City 05", label: "City 05" },
+    { value: "City 06", label: "City 06" },
+  ];
+
   return (
     <section className="contact-section py-12 lg:py-20">
       <div className="site-container">
@@ -23,70 +33,73 @@ const Contact = () => {
                 <form>
                   <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
                     <div className="single-form-item">
-                      <label htmlFor="name">name</label>
+                      <label htmlFor="name">
+                        name <span className="req">*</span>
+                      </label>
                       <input
                         type="text"
                         name="name"
                         id="name"
                         placeholder="Full name"
+                        required
                       />
                     </div>
                     <div className="single-form-item">
-                      <label htmlFor="phone">Phone no.*</label>
-                      <input
-                        type="text"
-                        name="phone"
-                        id="phone"
-                        placeholder="+91- 1234 5678 90"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-                    <div className="single-form-item">
-                      <label htmlFor="city">City *</label>
-                      <input
-                        type="text"
-                        name="city"
-                        id="city"
-                        placeholder="Your city"
-                      />
-                    </div>
-                    <div className="single-form-item">
-                      <label htmlFor="name">Pin code*</label>
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="123456"
+                      <label htmlFor="city">
+                        City <span className="req">*</span>
+                      </label>
+                      <Select
+                        options={options}
+                        placeholder="Select city"
+                        required
                       />
                     </div>
                   </div>
 
                   <div className="single-form-item">
-                    <label htmlFor="email">Email*</label>
+                    <label htmlFor="email">
+                      Email <span className="req">*</span>
+                    </label>
                     <input
                       type="email"
                       name="email"
                       id="email"
                       placeholder="Your Email"
+                      required
                     />
                   </div>
 
                   <div className="single-form-item">
-                    <label htmlFor="message">Message*</label>
+                    <label htmlFor="purpose">purpose</label>
+                    <input
+                      type="text"
+                      name="purpose"
+                      id="purpose"
+                      placeholder="Your purpose"
+                    />
+                  </div>
+
+                  <div className="single-form-item">
+                    <label htmlFor="message">
+                      Message <span className="req">*</span>
+                    </label>
                     <textarea
                       name="message"
                       id="message"
                       cols="30"
                       rows="3"
                       placeholder="Message"
+                      required
                     ></textarea>
                   </div>
 
                   <div className="single-form-item">
                     <input type="checkbox" id="agree" />{" "}
-                    <label htmlFor="agree">
-                      I agree with your <Link>Trams & Condetion</Link>
+                    <label htmlFor="agree" className="font-light">
+                      I agree with your{" "}
+                      <Link to="#" className="text-sky-500">
+                        Trams & Condetion
+                      </Link>
                     </label>
                   </div>
 
