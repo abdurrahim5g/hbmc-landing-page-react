@@ -23,6 +23,29 @@ const Header = () => {
     navigate(`/${code}`);
   };
 
+  // handle navbar  fixed
+  let prevPosition = 0;
+  const handleScroll = (e) => {
+    // get the current position at on the page
+    const currentPosition = e.target.documentElement.scrollTop;
+    const mainMenu = document.getElementById("mainMenu");
+
+    if (prevPosition < currentPosition) {
+      prevPosition = currentPosition;
+      mainMenu.classList.remove("header-fixed", "shadow-lg");
+    } else if (prevPosition > currentPosition) {
+      prevPosition = currentPosition;
+      mainMenu.classList.add("header-fixed", "shadow-lg");
+    }
+
+    if (currentPosition <= 400) {
+      mainMenu.classList.remove("header-fixed", "shadow-lg");
+    }
+    // console.log(currentPosition);
+  };
+
+  window.addEventListener("scroll", (e) => handleScroll(e));
+
   const menu_items = (
     <>
       <li>
@@ -105,39 +128,48 @@ const Header = () => {
   return (
     <header className="header-component">
       <HeaderTop></HeaderTop>
-      <div className="site-container">
-        <div className="flex justify-between items-center py-3 gap-4">
-          <div className="logo-area">
-            <Link to="/">
-              <img
-                src={logo}
-                alt=""
-                className="w-40 lg:w-auto hidden lg:block"
-              />
-              <img
-                src={mobileLogo}
-                alt=""
-                className="w-16 block lg:hidden lg:w-auto"
-              />
-            </Link>
-          </div>
 
-          <div className="menu-area">
-            <button className="block  md:hidden" onClick={() => setShow(!show)}>
-              <img src={!show ? menuToggle : cross} alt="" />
-            </button>
+      <div
+        className="main-menu top-0 w-full bg-white z-10 transition"
+        id="mainMenu"
+      >
+        <div className="site-container">
+          <div className="flex justify-between items-center py-3 gap-4">
+            <div className="logo-area">
+              <Link to="/">
+                <img
+                  src={logo}
+                  alt=""
+                  className="w-40 lg:w-auto hidden lg:block"
+                />
+                <img
+                  src={mobileLogo}
+                  alt=""
+                  className="w-16 block lg:hidden lg:w-auto"
+                />
+              </Link>
+            </div>
 
-            {show && (
-              <nav className="mobile-nav  block md:hidden absolute w-44 rounded-lg right-4 bg-white shadow-lg p-4">
-                <ul className="grid gap-3">{menu_items}</ul>
+            <div className="menu-area">
+              <button
+                className="block  md:hidden"
+                onClick={() => setShow(!show)}
+              >
+                <img src={!show ? menuToggle : cross} alt="" />
+              </button>
+
+              {show && (
+                <nav className="mobile-nav  block md:hidden absolute w-44 rounded-lg right-4 bg-white shadow-lg p-4">
+                  <ul className="grid gap-3">{menu_items}</ul>
+                </nav>
+              )}
+
+              <nav className="hidden md:block desktop-menu">
+                <ul className="flex gap-4 lg:gap-8 capitalize items-center">
+                  {menu_items}
+                </ul>
               </nav>
-            )}
-
-            <nav className="hidden md:block desktop-menu">
-              <ul className="flex gap-4 lg:gap-8 capitalize items-center">
-                {menu_items}
-              </ul>
-            </nav>
+            </div>
           </div>
         </div>
       </div>
