@@ -41,3 +41,8 @@
   float: right;
   margin-left: 10px;
 }
+
+[dir="rtl"] nav.mobile-nav {
+  right: auto;
+  left: 15px;
+}
