@@ -19,3 +19,25 @@
 [dir="rtl"] .about-section .text-column {
   padding-right: 30px;
 }
+
+[dir="rtl"] .slick-next {
+  right: 0 !important;
+  left: auto !important;
+}
+
+[dir="rtl"] .single-product .rating {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .single-product .product-body p {
+  margin-left: auto;
+}
+
+[dir="rtl"] .single-project .project-info .play button {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .single-form-item input[type="checkbox"] {
+  float: right;
+  margin-left: 10px;
+}
