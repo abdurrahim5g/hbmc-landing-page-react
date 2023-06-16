@@ -54,10 +54,12 @@
 .single-form-item .css-13cymwt-control {
   box-shadow: none !important;
 }
-.purpose .css-1wy0on6, /*  this is for production*/
+
+/*  1st  for production || 2nd one for development */
+/* .purpose .css-1wy0on6,
 .purpose .css-4xgw5l-IndicatorsContainer2 {
   display: none;
-}
+} */
 
 .single-form-item .css-b62m3t-container input {
   box-shadow: none;
