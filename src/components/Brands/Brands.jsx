@@ -58,7 +58,7 @@ const Brands = () => {
   };
 
   return (
-    <section className="projects-section py-12">
+    <section className="projects-section py-12" id="brands">
       <div className="container mx-auto px-4">
         <Title>Brands</Title>
 

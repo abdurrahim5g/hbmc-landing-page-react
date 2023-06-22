@@ -49,7 +49,7 @@ const LatestProject = () => {
 
   const projects = [project1, project2, project3, project1, project2, project3];
   return (
-    <section className="projects-section py-12">
+    <section className="projects-section py-12" id="projects">
       <div className="site-container">
         <Title>Latest Projects</Title>
 

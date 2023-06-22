@@ -43,33 +43,63 @@ const Header = () => {
     }
     // console.log(currentPosition);
   };
-
   window.addEventListener("scroll", (e) => handleScroll(e));
+
+  // handle smooth scroll
+  const handleSmoothScroll = (e) => {
+    e.preventDefault();
+    const hash = e.target.hash.slice(1); // get the id
+    const elementOffset = document.getElementById(hash).offsetTop; // get offset to top
+    // finally scroll to the wight position
+    window.scrollTo({
+      top: elementOffset,
+    });
+  };
 
   const menu_items = (
     <>
       <li>
-        <Link className="text-sm lg:text-base" to="">
+        <Link
+          className="text-sm lg:text-base"
+          to="#home"
+          onClick={handleSmoothScroll}
+        >
           Home
         </Link>
       </li>
       <li>
-        <Link className="text-sm lg:text-base" to="">
+        <Link
+          className="text-sm lg:text-base"
+          to="#about"
+          onClick={handleSmoothScroll}
+        >
           about
         </Link>
       </li>
       <li>
-        <Link className="text-sm lg:text-base" to="">
+        <Link
+          className="text-sm lg:text-base"
+          to="#products"
+          onClick={handleSmoothScroll}
+        >
           Products
         </Link>
       </li>
       <li>
-        <Link className="text-sm lg:text-base" to="">
+        <Link
+          className="text-sm lg:text-base"
+          to="#brands"
+          onClick={handleSmoothScroll}
+        >
           Our Brands
         </Link>
       </li>
       <li>
-        <Link className="text-sm lg:text-base" to="">
+        <Link
+          className="text-sm lg:text-base"
+          to="#projects"
+          onClick={handleSmoothScroll}
+        >
           Projects
         </Link>
       </li>
@@ -118,7 +148,11 @@ const Header = () => {
         </div>
       </li>
       <li className="contact-us">
-        <Link className="text-sm lg:text-base" to="">
+        <Link
+          className="text-sm lg:text-base"
+          to="#contact"
+          onClick={handleSmoothScroll}
+        >
           Contact us
         </Link>
       </li>

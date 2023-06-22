@@ -23,7 +23,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="contact-section py-12 lg:py-20">
+    <section className="contact-section py-12 lg:py-20" id="contact">
       <div className="site-container">
         <div className="row">
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 ">

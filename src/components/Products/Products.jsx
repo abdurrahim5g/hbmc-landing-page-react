@@ -85,7 +85,7 @@ const Products = () => {
   };
 
   return (
-    <section className="projects-section py-12">
+    <section className="projects-section py-12" id="products">
       <div className="site-container">
         <Title>Products</Title>
 

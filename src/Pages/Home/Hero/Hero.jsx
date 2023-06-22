@@ -14,7 +14,7 @@ const Hero = () => {
   const { t } = useContext(LanguageContex);
 
   return (
-    <div className="hero-section border py-16 lg:pb-28">
+    <div className="hero-section border py-16 lg:pb-28" id="home">
       <div className="site-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 place-content-center">
           <div className="hero-text grid place-content-center">
