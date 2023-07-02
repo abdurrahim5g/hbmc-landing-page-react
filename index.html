@@ -14,6 +14,16 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <script>
+      window.onload = () => {
+        setTimeout(() => {
+          document.getElementById("preloader").style.display = "none";
+          document.body.style.overflow = "auto";
+          document.body.style.position = "static";
+        }, [1000]);
+      };
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
