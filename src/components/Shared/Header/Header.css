@@ -1,3 +1,7 @@
+.header-component {
+  height: 110px;
+}
+
 li.contact-us a {
   background: var(--primary-color);
   padding: 8px 30px;
