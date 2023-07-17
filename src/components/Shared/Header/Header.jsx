@@ -194,7 +194,9 @@ const Header = () => {
 
               {show && (
                 <nav className="mobile-nav  block md:hidden absolute w-44 rounded-lg right-4 bg-white shadow-lg p-4">
-                  <ul className="grid gap-3">{menu_items}</ul>
+                  <ul className="grid gap-3" onClick={() => setShow(!show)}>
+                    {menu_items}
+                  </ul>
                 </nav>
               )}
 
