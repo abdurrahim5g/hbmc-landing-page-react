@@ -50,6 +50,8 @@
   background: #e4e9f2;
   padding: 7px 25px;
   border-radius: 30px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .projects-gallary .project-outer {
