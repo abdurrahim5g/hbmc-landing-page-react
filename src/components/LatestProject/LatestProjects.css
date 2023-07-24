@@ -54,29 +54,29 @@
   font-weight: 400;
 }
 
-.projects-gallary .project-outer {
+/* .projects-gallary .project-outer {
   flex: 0 0 33.33%;
   max-width: 33.33%;
-}
+} */
 
-.projects-gallary {
+/* .projects-gallary {
   row-gap: 30px;
-}
+} */
 
 /* Respinsive styles
 =============================*/
 @media all and (max-width: 1024px) {
-  .projects-gallary .project-outer {
+  /* .projects-gallary .project-outer {
     flex: 0 0 50%;
     max-width: 50%;
-  }
+  } */
 }
 
 @media all and (max-width: 767px) {
-  .projects-gallary .project-outer {
+  /* .projects-gallary .project-outer {
     flex: 0 0 100%;
     max-width: 100%;
-  }
+  } */
   .projects-filter button {
     padding: 5px 20px;
     font-size: 14px;

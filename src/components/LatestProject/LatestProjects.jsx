@@ -14,15 +14,18 @@ import Slider from "react-slick";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const LatestProject = () => {
+  // selected catagory for projects
+  const [catagory, setCatagory] = useState(null);
+
   const settings = {
     dots: false,
     arrows: true,
-    infinite: true,
+    infinite: false,
     autoplaySpeed: 3500,
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     pauseOnHover: true,
     prevArrow: (
       <button id="prev" className="slider-control">
@@ -45,6 +48,7 @@ const LatestProject = () => {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
+          infinite: true,
         },
       },
     ],
@@ -67,8 +71,10 @@ const LatestProject = () => {
     { image: project2, catagory: "solar" },
     { image: project3, catagory: "energy" },
   ];
-
-  const [catagory, setCatagory] = useState("");
+  const filerProjects = projects.filter(
+    (project) => project.catagory === catagory || catagory == null
+  );
+  // console.log(catagory, filerProjects);
 
   return (
     <section className="projects-section py-12" id="projects">
@@ -79,8 +85,8 @@ const LatestProject = () => {
           <div className="projects-filter">
             <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-8 mb-8">
               <button
-                className={`${catagory === "" ? "active" : ""}`}
-                onClick={() => setCatagory("")}
+                className={`${catagory === null ? "active" : ""}`}
+                onClick={() => setCatagory(null)}
               >
                 All
               </button>
@@ -105,13 +111,15 @@ const LatestProject = () => {
             </div>
           </div>
           <div className="projects-gallary relative flex flex-wrap justify-center">
-            {projects?.map((project, index) => (
-              <ProjectCard
-                project={project}
-                key={index}
-                active={catagory}
-              ></ProjectCard>
-            ))}
+            <Slider {...settings}>
+              {filerProjects?.map((project, index) => (
+                <ProjectCard
+                  project={project}
+                  key={index}
+                  active={catagory}
+                ></ProjectCard>
+              ))}
+            </Slider>
           </div>
         </div>
 

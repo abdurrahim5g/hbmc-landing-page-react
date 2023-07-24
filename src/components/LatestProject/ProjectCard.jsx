@@ -3,13 +3,13 @@ import play from "../../assets/images/play.png";
 
 const ProjectCard = ({ project, active }) => {
   const { image, catagory } = project;
-  console.log(active);
+  // console.log(active);
   const hidden = active && catagory !== active ? "hidden" : "";
 
   return (
     <div
       key={project}
-      className={`md:px-4 project-outer ${catagory} ${hidden}`}
+      className={`px-4 project-outer w-full ${catagory} ${hidden}`}
     >
       <div className="single-project">
         <div className="project-image">
