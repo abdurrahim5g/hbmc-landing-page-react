@@ -9,7 +9,7 @@ import project3 from "../../assets/images/projects/project-3.png";
 import ProjectCard from "./ProjectCard";
 import { useState } from "react";
 
-import play from "../../assets/images/play.png";
+// import play from "../../assets/images/play.png";
 import Slider from "react-slick";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
@@ -53,14 +53,14 @@ const LatestProject = () => {
       },
     ],
   };
-  const projectImages = [
-    project1,
-    project2,
-    project3,
-    project1,
-    project2,
-    project3,
-  ];
+  // const projectImages = [
+  //   project1,
+  //   project2,
+  //   project3,
+  //   project1,
+  //   project2,
+  //   project3,
+  // ];
 
   // Projects JSON
   const projects = [
@@ -123,11 +123,11 @@ const LatestProject = () => {
           </div>
         </div>
 
-        <div className="px-4">
+        {/* <div className="px-4">
           <hr className="mt-8" />
-        </div>
+        </div> */}
 
-        <div className="projects-row mt-10">
+        {/* <div className="projects-row mt-10">
           <div className="projects-slider relative">
             <Slider {...settings}>
               {projectImages?.map((p) => (
@@ -158,7 +158,7 @@ const LatestProject = () => {
               ))}
             </Slider>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
