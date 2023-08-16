@@ -9,6 +9,7 @@ import hero3 from "../../../assets/images/hero-images/hero-3.png";
 import hero4 from "../../../assets/images/hero-images/hero-4.png";
 import heroRating from "../../../assets/images/hero-images/star.png";
 import { FaStar } from "react-icons/fa";
+import { handleSmoothScroll } from "../../../utility/utility";
 
 const Hero = () => {
   const { t } = useContext(LanguageContex);
@@ -22,14 +23,22 @@ const Hero = () => {
               {t("heroTitle")}
             </h1>
             <p className="text-center lg:text-left font-light mt-6 mb-10">
-              {t("heroSubtitle")}
+              {t("heroText")}
             </p>
 
             <div className="hero-buttons flex gap-5 justify-center lg:justify-start">
-              <Link to="#" className="site-btn">
+              <Link
+                to="#about"
+                className="site-btn"
+                onClick={handleSmoothScroll}
+              >
                 Know More
               </Link>
-              <Link to="#" className="site-btn btn-outline">
+              <Link
+                to="#products"
+                className="site-btn btn-outline"
+                onClick={handleSmoothScroll}
+              >
                 See Collection
               </Link>
             </div>
