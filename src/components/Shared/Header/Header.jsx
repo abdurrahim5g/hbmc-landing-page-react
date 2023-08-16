@@ -10,6 +10,8 @@ import menuToggle from "../../../assets/images/menu.png";
 import cross from "../../../assets/images/cross.png";
 import { useContext, useState } from "react";
 import { LanguageContex } from "../../../Contex/LanguageProvider";
+// import handleSmoothScroll
+import { handleSmoothScroll } from "../../../utility/utility";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -46,15 +48,15 @@ const Header = () => {
   window.addEventListener("scroll", (e) => handleScroll(e));
 
   // handle smooth scroll
-  const handleSmoothScroll = (e) => {
-    e.preventDefault();
-    const hash = e.target.hash.slice(1); // get the id
-    const elementOffset = document.getElementById(hash).offsetTop; // get offset to top
-    // finally scroll to the wight position
-    window.scrollTo({
-      top: elementOffset,
-    });
-  };
+  // const handleSmoothScroll = (e) => {
+  //   e.preventDefault();
+  //   const hash = e.target.hash.slice(1); // get the id
+  //   const elementOffset = document.getElementById(hash).offsetTop; // get offset to top
+  //   // finally scroll to the wight position
+  //   window.scrollTo({
+  //     top: elementOffset,
+  //   });
+  // };
 
   const menu_items = (
     <>

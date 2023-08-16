@@ -3,6 +3,7 @@ import "./About.css";
 import aboutImage from "../../assets/images/what-we-do.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { handleSmoothScroll } from "../../utility/utility";
 
 const About = () => {
   return (
@@ -21,22 +22,30 @@ const About = () => {
               </Title>
 
               <p className="font-light mt-8">
-                Our team of experts is committed to providing you with the best
-                possible service, from start to finish. We work closely with you
-                to understand your needs and ensure that we deliver the right
-                materials for your project
+                Al Hayat building materials company “HBMC”, established in 1983,
+                is a member of the well known IKK “Issam Kheiry Kabbani” group
+                of companies. We are considered to be the leaders in our field
+                throughout the region.
+              </p>
+              <p className="font-light mt-6">
+                Our product range covers tools and power tools, porcelain and
+                ceramic tiles, stainless steel hardware, network valves,
+                sanitary ware ,sanitary fixtures, sanitary fittings, bathroom
+                accessories, water heaters, kitchens and many more.
+              </p>
+              <p className="font-light mt-6">
+                Our presence in 21 cities in the kingdom and our high levels of
+                stock availability allow us to cater wholesale to 4000+ retail
+                shops in the and work directly and closely with construction
+                projects.
               </p>
 
-              <h3 className="mt-5 mb-2 font-semibold">
-                Source and Supply Materials
-              </h3>
-              <p className="font-light">
-                We have a vast network of suppliers and manufacturers, and we
-                source the best quality building materials at competitive
-                prices.
-              </p>
               <div className="inline-block  mt-8">
-                <Link className="site-btn w-auto" to={"#"}>
+                <Link
+                  className="site-btn w-auto"
+                  to="#products"
+                  onClick={handleSmoothScroll}
+                >
                   Shop Now
                 </Link>
               </div>
